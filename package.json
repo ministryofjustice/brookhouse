@@ -1,0 +1,39 @@
+{
+    "name": "roots",
+    "version": "7.0.1",
+    "description": "This is a Bedrock based (https://roots.io/bedrock/) WordPress website for the PPO",
+    "author": "Ben Word <ben@benword.com>",
+    "homepage": "http://roots.io",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/roots/roots.git"
+    },
+    "bugs": {
+        "url": "https://github.com/roots/roots/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "scripts": {
+        "dev": "NODE_ENV=development webpack --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "NODE_ENV=development webpack --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "production": "NODE_ENV=production webpack --progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "copy-webpack-plugin": "^6.3.0",
+        "laravel-mix": "^6.0.25",
+        "laravel-mix-imagemin": "^1.0.3",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.35.2",
+        "sass-loader": "^10.0.5",
+        "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "govuk-frontend": "^3.11.0"
+    }
+}

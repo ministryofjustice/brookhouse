@@ -1,0 +1,133 @@
+/* Hearings */
+
+.page-template-page-hearings {
+    table {
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        table-layout: fixed;
+        width: 100%;
+        margin-bottom: 30px;
+
+        // reset for chrome
+        h2,
+        h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        h2 {
+            font-size: 1.4em;
+        }
+
+        caption {
+            padding: .625em;
+            text-align: left;
+            font-weight: bold;
+        }
+    }
+
+    table tr {
+        background-color: $grey-light;
+        border: 2px solid $white;
+        padding: .35em;
+    }
+
+    table th,
+    table td {
+        padding: .625em;
+        text-align: left;
+    }
+
+    table th {
+        background-color: #404040;
+        color: white;
+        border: 2px solid $white;
+    }
+
+    table td {
+        border: 2px solid $white;
+    }
+
+    // "date" column width
+    thead tr th:nth-child(1) {
+        width: 15%;
+    }
+
+    // "hearing" column width
+    thead tr th:nth-child(2) {
+        width: 45%;
+    }
+
+    // "link" column width
+    thead tr th:nth-child(3) {
+        width: 40%;
+    }
+
+    @media screen and (max-width: 600px) {
+        table caption {
+            padding: .625em 0;
+        }
+
+        table thead {
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        table tr {
+            display: block;
+            margin-bottom: 6px;
+            border: none;
+            padding: 0;
+        }
+
+        table td {
+            border:1px solid white; 
+            display: block;
+        }
+
+        table td:last-child {
+            border-bottom: none;
+        }
+
+        table td::before {
+            content: attr(data-label);
+            float: left;
+            margin-right: 6px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        [data-label="Date"] {
+            background-color: #404040;
+            color: white;
+        }
+    }
+
+    .hearing_document {
+        margin-bottom: 12px;
+    }
+}
+
+.hearings-template-default {
+    #main {
+        margin-bottom: 12px;
+    }
+
+    .hearing_links,
+    .hearing_document {
+        padding-bottom: 6px;
+        margin-bottom: 12px;
+    }
+
+    h3 {
+        margin: 8px 0;
+    }
+}

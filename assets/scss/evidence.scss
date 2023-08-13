@@ -1,0 +1,84 @@
+.evidence {
+  &__list {
+    list-style-type: none;
+    margin: 0 0 4rem 0;
+
+    @supports (display: grid) {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+    }
+  }
+
+  &__item {
+    border: 1px solid black;
+    background: $beige-light;
+    margin: 1.5rem;
+    padding: 2rem;
+    line-height: 1.5;
+    float: left;
+    width: 24rem;
+
+    @supports (display: grid) {
+        width: unset;
+        float: unset;
+    }
+
+    &--term {
+      display: inline;
+
+      &::after {
+        content: ":";
+      }
+    }
+
+    &--definition {
+      margin: 0;
+      display: inline;
+    }
+
+    &--heading {
+      color: $black;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+
+    &--link {
+      margin-top: 2rem;
+      display: block;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+  }
+  &__filter {
+    margin: 1.5rem;
+
+    @supports (display: flex) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  &__fieldset {
+    width: 100rem;
+    vertical-align: top;
+
+    &.govuk-fieldset {
+      margin-top: 2rem;
+    }
+
+    @media screen and (min-width: 400px) {
+      width: 30%;
+      display: inline-block;
+    }
+  }
+}
+
+#js-turned-off {
+  display: block;
+}
+
+#js-evidence-filter {
+  display: none;
+}

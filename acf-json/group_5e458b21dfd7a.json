@@ -1,0 +1,58 @@
+{
+    "key": "group_5e458b21dfd7a",
+    "title": "Header Settings",
+    "fields": [
+        {
+            "key": "field_5e458b5ae4f87",
+            "label": "Brookhouse Investigation telephone number",
+            "name": "telephone_number",
+            "type": "text",
+            "instructions": "Add in the telephone number you'd like to appear at the top of the homepage.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5e6254c0fbb21",
+            "label": "Header Link",
+            "name": "header_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "header-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Content to go in the header on the homepage",
+    "modified": 1585056873
+}
