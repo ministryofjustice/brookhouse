@@ -66,7 +66,7 @@ include "inc/emergency-banner.php";
                         <img src="<?= get_template_directory_uri(); ?>/dist/img/brookhouse-logo.svg"
                             alt="<?php bloginfo('name'); ?>">
                     </a>
-
+                    <?php if (!empty($moj_bh_phone_number)) { ?>
                     <div class="site-header__phone-number">
                         <a href="tel:<?= $moj_bh_phone_number_link ?>">
                             <img class="site-header__phone-number--image"
@@ -75,6 +75,7 @@ include "inc/emergency-banner.php";
                             <span class="site-header__phone-number--text"><?= $moj_bh_phone_number ?></span>
                         </a>
                     </div>
+                    <?php } ?>
                 </div>
 
                 <div class="col">
