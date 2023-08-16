@@ -10,6 +10,7 @@ function brookhouse_allowed_block_types($allowed_blocks)
         'core/paragraph',
         'core/heading',
         'core/list',
+        'core/list-item',
         'core/file',
         'core/media-text',
         'core/columns',
