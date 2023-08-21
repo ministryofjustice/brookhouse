@@ -1,22 +1,19 @@
 <?php
+function brookhouse_get_document_taxonomies() {
+    return [
+        'corporate-documents',
+        'media-releases',
+        'other-publications'
+    ];
+}
 
-/**
- * Managing taxonomies
- *
- * @package brookhouse
- */
-
-$documentTaxonomies = [
-    'corporate-documents',
-    'media-releases',
-    'other-publications'
-];
-
-$evidenceTaxonomies = [
-    'evidence-type',
-    'evidence-format',
-    'witness-type'
-];
+function brookhouse_get_evidence_taxonomies() {
+    return [
+        'evidence-type',
+        'evidence-format',
+        'witness-type'
+    ];
+}
 
 /**
 *
@@ -27,7 +24,7 @@ add_action('init', 'brookhouse_create_document_taxonomies');
 
 function brookhouse_create_document_taxonomies()
 {
-    global $documentTaxonomies;
+    $documentTaxonomies = brookhouse_get_document_taxonomies();
 
     if (is_array($documentTaxonomies)) {
         foreach ($documentTaxonomies as $taxonomy) {
@@ -71,7 +68,7 @@ add_action('init', 'brookhouse_create_evidence_taxonomies');
 
 function brookhouse_create_evidence_taxonomies()
 {
-    global $evidenceTaxonomies;
+    $evidenceTaxonomies = brookhouse_get_evidence_taxonomies();
 
     if (is_array($evidenceTaxonomies)) {
         foreach ($evidenceTaxonomies as $taxonomy) {

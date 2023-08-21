@@ -15,7 +15,7 @@ add_action('init', 'brookhouse_ctp_document_init');
 
 function brookhouse_ctp_document_init()
 {
-    global $documentTaxonomies;
+    $documentTaxonomies = brookhouse_get_document_taxonomies();
 
     $labels = [
         'name' => 'Documents',
@@ -63,7 +63,7 @@ add_action('do_meta_boxes', 'wpdocs_remove_plugin_metaboxes_documents');
 
 function wpdocs_remove_plugin_metaboxes_documents()
 {
-    global $documentTaxonomies;
+    $documentTaxonomies = brookhouse_get_document_taxonomies();
 
     if (count($documentTaxonomies) > 0) {
         remove_meta_box('corporate-documentsdiv', 'Documents', 'side');

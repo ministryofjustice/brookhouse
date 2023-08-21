@@ -15,7 +15,7 @@ add_action('init', 'brookhouse_ctp_evidence_init');
 
 function brookhouse_ctp_evidence_init()
 {
-    global $evidenceTaxonomies;
+    $evidenceTaxonomies = brookhouse_get_evidence_taxonomies();
 
     $labels = [
         'name' => 'Evidence',
@@ -63,7 +63,7 @@ add_action('do_meta_boxes', 'wpdocs_remove_plugin_metaboxes_evidence');
 
 function wpdocs_remove_plugin_metaboxes_evidence()
 {
-    global $evidenceTaxonomies;
+    $evidenceTaxonomies = brookhouse_get_evidence_taxonomies();
 
     if (count($evidenceTaxonomies) > 0) {
         remove_meta_box('evidence-typediv', 'Evidence', 'side');
