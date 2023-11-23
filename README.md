@@ -1,2 +1,2 @@
 # brookhouse
-Brookhouse Wordpress Theme.
+Brookhouse Wordpress Theme
